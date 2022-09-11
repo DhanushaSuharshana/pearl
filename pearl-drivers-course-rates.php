@@ -55,7 +55,7 @@
                 </div><!-- /.container -->
             </section><!-- /.page-header -->
             <section class="pricing-one" style="background-image: url(assets/images/shapes/pricing-bg-1-1.png);">
-                <img src="assets/images/shapes/swimmer-contact-1.png" class="contact-one__swimmer" alt="">
+              
                 <div class="container">
                     <div class="table-responsive">
                         <table>
