@@ -28,7 +28,7 @@
             <div class="main-nav__main-navigation">
                 <ul class="main-nav__navigation-box">
                     <li>
-                        <a href="#">Home</a>
+                        <a href="./">Home</a>
 
                     </li>
                     <li><a href="about-pearl-drivers.php">About</a></li>
@@ -38,7 +38,7 @@
                         <ul>
                             <li><a href="pearl-drivers-courses.php">Courses</a></li>
                             <li><a href="pearl-drivers-course-rates.php">Course Ratess</a></li>
-                            <li><a href="pearl-drivers-course-rates.php">Dive Sites</a></li>
+                            <li><a href="pearl-drivers-dive-sites.php">Dive Sites</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
