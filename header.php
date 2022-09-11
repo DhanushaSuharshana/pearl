@@ -29,20 +29,24 @@
                 <ul class="main-nav__navigation-box">
                     <li>
                         <a href="#">Home</a>
-                        
+
                     </li>
-                    <li><a href="#">About</a></li>
-                    <li class="">
-                        <a href="#">Courses</a>
-                       
+                    <li><a href="about-pearl-drivers.php">About</a></li>
+                    
+                    <li class="dropdown">
+                        <a href="">Courses</a>
+                        <ul>
+                            <li><a href="pearl-drivers-courses.php">Courses</a></li>
+                            <li><a href="pearl-drivers-course-rates.php">Course Ratess</a></li>
+                        </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#">Services</a>
-                    
+
                     </li>
                     <li>
                         <a href="#">Gallery</a>
-                       
+
                     </li>
                     <li><a href="#">Contact</a></li>
                 </ul><!-- /.main-nav__navigation-box -->
