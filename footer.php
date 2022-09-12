@@ -17,7 +17,7 @@
             <div class="footer-widget-row">
                 <div class="footer-widget footer-widget__about">
                     <div class="footer-widget__inner">
-                        <a href="index.html">
+                        <a href="./">
                             <img src="assets/images/logo-1-1.PNG" alt="" width="143">
                         </a>
 <!--                        <p>&copy; Copyright 2022 by <br>
@@ -57,10 +57,10 @@
                     <div class="footer-widget__inner">
                         <h3 class="footer-widget__title">Follow</h3><!-- /.footer-widget__title -->
                         <div class="footer-widget__social">
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-facebook-square"></i></a>
+                            <a href="https://twitter.com/unawatunadiving"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.facebook.com/pearldiversnwatersport/"><i class="fab fa-facebook-square"></i></a>
                             <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/pearldivers.lk/"><i class="fab fa-instagram"></i></a>
                         </div><!-- /.footer-widget__social -->
                     </div><!-- /.footer-widget__inner -->
                 </div><!-- /.footer-widget -->
