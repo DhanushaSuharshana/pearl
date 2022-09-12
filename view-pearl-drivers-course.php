@@ -62,11 +62,47 @@
                         <div class="col-lg-8">
                             <div class="blog-details__main">
                                 <div class="blog-one__image">
-                                    <a href="" class="blog-one__date">02 Jan, 2020</a>
+                                
                                     <div class="blog-one__image-inner">
                                         <img src="assets/images/blog/blog-d-1-1.jpg" alt="">
                                     </div><!-- /.blog-one__image-inner -->
                                 </div><!-- /.blog-one__image -->
+                                
+            
+            <section class="brand-one">
+                <div class="container">
+                    <div class="brand-one__carousel owl-carousel thm__owl-carousel owl-theme" data-options='{"loop": true, "autoplay": true, "autoplayHoverPause": true, "autoplayTimeout": 5000, "items": 5, "dots": false, "nav": false, "margin": 100, "smartSpeed": 700, "responsive": { "0": {"items": 2, "margin": 3}, "480": {"items": 3, "margin": 3}, "991": {"items": 4, "margin": 3}, "1199": {"items": 5, "margin": 3}}}'>
+                        <div class="item">
+                            <img src="assets/images/blog/blog-d-1-1.jpg" alt="">
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <img src="assets/images/blog/blog-d-1-1.jpg" alt="">
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <img src="assets/images/blog/blog-d-1-1.jpg" alt="">
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <img src="assets/images/blog/blog-d-1-1.jpg" alt="">
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <img src="assets/images/blog/blog-d-1-1.jpg" alt="">
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <img src="assets/images/blog/blog-d-1-1.jpg" alt="">
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <img src="assets/images/blog/blog-d-1-1.jpg" alt="">
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <img src="assets/images/blog/blog-d-1-1.jpg" alt="">
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <img src="assets/images/blog/blog-d-1-1.jpg" alt="">
+                        </div><!-- /.item -->
+                      
+                    </div><!-- /.brand-one__carousel owl-carousel thm__owl-carousel owl-theme -->
+                </div><!-- /.container -->
+            </section><!-- /.brand-one -->
                                 <div class="blog-details__content">
                                     <div class="blog-one__meta"></div><!-- /.blog-one__meta -->
                                     <h3 class="blog-details__main-title">Learn how to do Scuba diving in Island</h3>
