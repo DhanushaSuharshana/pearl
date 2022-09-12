@@ -54,11 +54,11 @@
                 </div><!-- /.container -->
             </section><!-- /.page-header -->
 
-
+        
 
             <!-- /.feature-two -->
             <section class="cta-four">
-               
+           
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-6">
@@ -101,7 +101,8 @@
 
             <section> 
                 <section class="team-one team-one__home-two">
-                     <div class="container">
+                    <div class="team-one__floated-text"></div><!-- /.team-one__floated-text -->
+                    <div class="container">
                         <div class="row">
                             <div class="col-lg-6 d-flex ">
                                 <div class="my-auto">
@@ -150,7 +151,7 @@
                                                 <div class="team-one__content-inner">
                                                     <h3>Maggie Goodman</h3>
                                                     <span>Co Founder</span>
-
+                                                
                                                 </div><!-- /.team-one__content-inner -->
                                             </div><!-- /.team-one__content -->
                                         </div><!-- /.team-one__single -->
@@ -162,7 +163,7 @@
                                                 <div class="team-one__content-inner">
                                                     <h3>Craig Hawkins</h3>
                                                     <span>Co Founder</span>
-
+                                                    
                                                 </div><!-- /.team-one__content-inner -->
                                             </div><!-- /.team-one__content -->
                                         </div><!-- /.team-one__single -->
@@ -174,7 +175,7 @@
                                                 <div class="team-one__content-inner">
                                                     <h3>Katharine Alvarez</h3>
                                                     <span>Co Founder</span>
-
+                                                    
                                                 </div><!-- /.team-one__content-inner -->
                                             </div><!-- /.team-one__content -->
                                         </div><!-- /.team-one__single -->
@@ -186,7 +187,7 @@
                                                 <div class="team-one__content-inner">
                                                     <h3>Mabel Underwood</h3>
                                                     <span>Co Founder</span>
-
+                                                   
                                                 </div><!-- /.team-one__content-inner -->
                                             </div><!-- /.team-one__content -->
                                         </div><!-- /.team-one__single -->

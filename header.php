@@ -38,6 +38,7 @@
                         <ul>
                             <li><a href="pearl-drivers-courses.php">Courses</a></li>
                             <li><a href="pearl-drivers-course-rates.php">Course Ratess</a></li>
+                            <li><a href="pearl-drivers-course-rates.php">Dive Sites</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -45,10 +46,10 @@
 
                     </li>
                     <li>
-                        <a href="#">Gallery</a>
+                        <a href="pearl-drivers-gallery.php">Gallery</a>
 
                     </li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="pearl-drivers-contact.php">Contact</a></li>
                 </ul><!-- /.main-nav__navigation-box -->
             </div><!-- /.main-nav__main-navigation -->
         </div><!-- /.inner-container -->
