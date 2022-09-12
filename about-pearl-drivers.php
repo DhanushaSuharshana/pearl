@@ -49,10 +49,10 @@
                 <!-- /.page-header__bg -->
                 <div class="container">
                     <ul class="list-unstyled thm-breadcrumb">
-                        <li><a href="index-2.html">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li class="active"><a href="#">About</a></li>
                     </ul><!-- /.list-unstyled -->
-                    <h2 class="page-header__title">About us</h2><!-- /.page-header__title -->
+                    <h2 class="page-header__title">About </h2><!-- /.page-header__title -->
                 </div><!-- /.container -->
             </section><!-- /.page-header -->
 
