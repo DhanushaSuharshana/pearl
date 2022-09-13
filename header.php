@@ -4,10 +4,10 @@
             <a href="#"> Welcome to Pearl Divers Sri Lanka</a>
         </div><!-- /.topbar-one__left -->
         <div class="topbar-one__social">
-            <a href="#"><i class="fab fa-facebook-square"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/pearldiversnwatersport/"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://twitter.com/unawatunadiving"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-pinterest-p"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/pearldivers.lk/"><i class="fab fa-instagram"></i></a>
         </div><!-- /.topbar-one__social -->
     </div><!-- /.container -->
 </div><!-- /.topbar-one -->
@@ -37,7 +37,7 @@
                         <a href="">Courses</a>
                         <ul>
                             <li><a href="pearl-drivers-courses.php">Courses</a></li>
-                            <li><a href="pearl-drivers-course-rates.php">Course Ratess</a></li>
+                            <li><a href="pearl-drivers-course-rates.php">Course Rates</a></li>
                             <li><a href="pearl-drivers-dive-sites.php">Dive Sites</a></li>
                         </ul>
                     </li>
