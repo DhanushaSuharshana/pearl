@@ -1,8 +1,10 @@
-
 <!DOCTYPE html>
+<?php
+include_once (dirname(__FILE__) . '/class/include.php');
+?>
 <html lang="en" dir="ltr">
 
-    <meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,7 +40,7 @@
 
     <body>
         <div class="preloader">
-            <img src="assets/images/preloader.png" class="preloader__image" alt="">
+            <img src="assets/images/preload.PNG" width="150px" class="preloader__image" alt="">
         </div><!-- /.preloader -->
         <div class="page-wrapper">
 
@@ -56,82 +58,35 @@
                 </div><!-- /.container -->
             </section><!-- /.page-header -->
 
-            <section class="service-one">
-             
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-3 col-md-6 col-sm-12">
-                            <div class="service-one__single">
-                                <i class="scubo-icon-scuba-diving"></i>
-                                <h3><a href="">Scuba <br> Diving</a></h3>
-                                <p>To scuba diving There are many variatin of passages of lorem ipsum available, but the majority
-                                    have if alteration in some formd bisc humour.</p>
-                            </div><!-- /.service-one__single -->
-                        </div><!-- /.col-lg-3 col-md-6 col-sm-12 -->
-                        <div class="col-xl-3 col-md-6 col-sm-12">
-                            <div class="service-one__single">
-                                <i class="scubo-icon-aqualung"></i>
-                                <h3><a href="">Snorkeling <br>
-                                        Dive</a></h3>
-                                <p>To scuba diving There are many variatin of passages of lorem ipsum available, but the majority
-                                    have if alteration in some formd bisc humour.</p>
-                            </div><!-- /.service-one__single -->
-                        </div><!-- /.col-lg-3 col-md-6 col-sm-12 -->
-                        <div class="col-xl-3 col-md-6 col-sm-12">
-                            <div class="service-one__single">
-                                <i class="scubo-icon-swimming"></i>
-                                <h3><a href="">Learn <br> Swimming</a></h3>
-                                <p>To scuba diving There are many variatin of passages of lorem ipsum available, but the majority
-                                    have if alteration in some formd bisc humour.</p>
-                            </div><!-- /.service-one__single -->
-                        </div><!-- /.col-lg-3 col-md-6 col-sm-12 -->
-                        <div class="col-xl-3 col-md-6 col-sm-12">
-                            <div class="service-one__single">
-                                <i class="scubo-icon-snorkel"></i>
-                                <h3><a href="">Free <br> Diving</a></h3>
-                                <p>To scuba diving There are many variatin of passages of lorem ipsum available, but the majority
-                                    have if alteration in some formd bisc humour.</p>
-                            </div><!-- /.service-one__single -->
-                        </div><!-- /.col-lg-3 col-md-6 col-sm-12 -->
-                        <div class="col-xl-3 col-md-6 col-sm-12">
-                            <div class="service-one__single">
-                                <i class="scubo-icon-snorkel"></i>
-                                <h3><a href="">Free <br> Diving</a></h3>
-                                <p>To scuba diving There are many variatin of passages of lorem ipsum available, but the majority
-                                    have if alteration in some formd bisc humour.</p>
-                            </div><!-- /.service-one__single -->
-                        </div><!-- /.col-lg-3 col-md-6 col-sm-12 -->
-                        <div class="col-xl-3 col-md-6 col-sm-12">
-                            <div class="service-one__single">
-                                <i class="scubo-icon-snorkel"></i>
-                                <h3><a href="">Free <br> Diving</a></h3>
-                                <p>To scuba diving There are many variatin of passages of lorem ipsum available, but the majority
-                                    have if alteration in some formd bisc humour.</p>
-                            </div><!-- /.service-one__single -->
-                        </div><!-- /.col-lg-3 col-md-6 col-sm-12 -->
-                        <div class="col-xl-3 col-md-6 col-sm-12">
-                            <div class="service-one__single">
-                                <i class="scubo-icon-snorkel"></i>
-                                <h3><a href="">Free <br> Diving</a></h3>
-                                <p>To scuba diving There are many variatin of passages of lorem ipsum available, but the majority
-                                    have if alteration in some formd bisc humour.</p>
-                            </div><!-- /.service-one__single -->
-                        </div><!-- /.col-lg-3 col-md-6 col-sm-12 -->
-                        <div class="col-xl-3 col-md-6 col-sm-12">
-                            <div class="service-one__single">
-                                <i class="scubo-icon-snorkel"></i>
-                                <h3><a href="">Free <br> Diving</a></h3>
-                                <p>To scuba diving There are many variatin of passages of lorem ipsum available, but the majority
-                                    have if alteration in some formd bisc humour.</p>
-                            </div><!-- /.service-one__single -->
-                        </div><!-- /.col-lg-3 col-md-6 col-sm-12 -->
-                    </div><!-- /.row -->
-                </div><!-- /.container -->
-            </section><!-- /.service-one -->
+                 <section class="feature-two">
+            <div class="container">
+                <div class="row">
+                         <?php
+                    $SERVICE_OBJ = new Service(NULL);
+                   $SERVICE = $SERVICE_OBJ->all();
+                    foreach ($SERVICE as $service) {
+                        ?>
+                    <div class="col-lg-4 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="000ms">
+                        <div class="feature-two__single">
+                            <div class="feature-two__image">
+                                <img src="upload/service/<?php echo $service['image_name']?>" alt="">
+                            </div><!-- /.feature-two__image -->
+                            <div class="feature-two__content">
+                                <h3><a href=""><?php echo $service['title']?></a></h3>
+                                <p><?php echo $service['description']?></p>
+                            </div><!-- /.feature-two__content -->
+                        </div><!-- /.feature-two__single -->
+                    </div><!-- /.col-lg-4 -->
+                    <?php
+                    }
+                    ?>
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section><!-- /.feature-two -->
 
 
 
-            <?php include './footer.php'; ?>
+                <?php include './footer.php'; ?>
 
         </div><!-- /.page-wrapper -->
 

@@ -26,30 +26,40 @@
                 </div><!-- /.footer-widget -->
                 <div class="footer-widget footer-widget__links__widget-1">
                     <div class="footer-widget__inner">
-                        <h3 class="footer-widget__title">Company</h3><!-- /.footer-widget__title -->
+                        <h3 class="footer-widget__title">Quick Link</h3><!-- /.footer-widget__title -->
                         <ul class="footer-widget__links-list list-unstyled">
                             <li><a href="#">About Us</a></li>
-                            <li><a href="#">Our History</a></li>
+                            <li><a href="#">Services</a></li>
                             <li><a href="#">Contact</a></li>
                         </ul><!-- /.footer-widget__links-list -->
                     </div><!-- /.footer-widget__inner -->
                 </div><!-- /.footer-widget -->
                 <div class="footer-widget footer-widget__links__widget-2">
                     <div class="footer-widget__inner">
-                        <h3 class="footer-widget__title">Explore</h3><!-- /.footer-widget__title -->
+                        <h3 class="footer-widget__title">Popular Courses</h3><!-- /.footer-widget__title -->
                         <ul class="footer-widget__links-list list-unstyled">
-                            <li><a href="#">Popular Courses</a></li>
-                            <li><a href="#">How It Works</a></li>
-                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#"> Courses 01</a></li>
+                            <li><a href="#">Courses 02</a></li>
+                            <li><a href="#">Courses 03</a></li>
                         </ul><!-- /.footer-widget__links-list -->
                     </div><!-- /.footer-widget__inner -->
                 </div><!-- /.footer-widget -->
                 <div class="footer-widget footer-widget__links__widget-3">
                     <div class="footer-widget__inner">
-                        <h3 class="footer-widget__title">Links</h3><!-- /.footer-widget__title -->
+                        <h3 class="footer-widget__title">Dive Sites</h3><!-- /.footer-widget__title -->
                         <ul class="footer-widget__links-list list-unstyled">
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
+                              <?php
+                            $ATTRACTION_OBJ =new Attraction(NULL);
+                            $ATTRACTION = $ATTRACTION_OBJ->all();
+                            foreach ($ATTRACTION as $key=> $attraction){
+                            if($key < 3){
+                            ?>
+                            <li><a href="pearl-divers-dive-sites.php"><?php echo $attraction['title'];?></a></li>
+                             <?php
+                            }
+                            }
+                       ?>
+                        
                         </ul><!-- /.footer-widget__links-list -->
                     </div><!-- /.footer-widget__inner -->
                 </div><!-- /.footer-widget -->
@@ -59,7 +69,7 @@
                         <div class="footer-widget__social">
                             <a href="https://twitter.com/unawatunadiving"><i class="fab fa-twitter"></i></a>
                             <a href="https://www.facebook.com/pearldiversnwatersport/"><i class="fab fa-facebook-square"></i></a>
-                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                            <a href="#"><i class="fab fa-tripadvisor"></i></a>
                             <a href="https://www.instagram.com/pearldivers.lk/"><i class="fab fa-instagram"></i></a>
                         </div><!-- /.footer-widget__social -->
                     </div><!-- /.footer-widget__inner -->
@@ -71,13 +81,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
-                    <a href="tel:666-888-0000"><i class="fa fa-phone-alt"></i>+ 94 91 22 42015</a>
+                    <a href="+ 94 91 22 42015"><i class="fa fa-phone-alt"></i>+ 94 91 22 42015</a>
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
-                    <a href="mailto:needhelp@example.com"><i class="fa fa-envelope"></i>info@pearldivers.lk</a>
+                    <a href="info@pearldivers.lk"><i class="fa fa-envelope"></i>info@pearldivers.lk</a>
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
-                    <a href="contact.html"><i class="fa fa-map"></i> Peellagoda,Unawautuna,
+                    <a href="pearl-divers-contact.php"><i class="fa fa-map"></i> Peellagoda,Unawautuna,
                       </a>
                 </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->

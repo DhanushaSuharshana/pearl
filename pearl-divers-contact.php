@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,7 +37,7 @@
 
     <body>
         <div class="preloader">
-            <img src="assets/images/preloader.png" class="preloader__image" alt="">
+           <img src="assets/images/preload.PNG" width="150px" class="preloader__image" alt="">
         </div><!-- /.preloader -->
         <div class="page-wrapper">
 
@@ -141,33 +141,12 @@
                 </div><!-- /.row -->
         </div><!-- /.container -->
     </section><!-- /.contact-one -->
+ <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15871.58497240644!2d80.2507435!3d6.008983!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2891191b154bc9e1!2sPearl+Divers+PADI+Resort!5e0!3m2!1sen!2s!4v1463203215967" class="google-map__contact" allowfullscreen></iframe>
+   
 
-    <section class="cta-one">
-        <div class="container wow fadeInRight" data-wow-duration="1500ms">
-            <div class="cta-one__title">support</div><!-- /.cta-one__title -->
-            <div class="inner-container">
-                <div class="row">
-                    <div class="col-lg-5 d-flex">
-                        <div class="my-auto">
-                            <div class="cta-one__phone">
-                                <i class="fa fa-phone-alt"></i>
-                                <a href="tel:+94 912 242 015">+94 912 242 015</a>
-                            </div><!-- /.cta-one__phone -->
-                        </div><!-- /.my-auto -->
-                    </div><!-- /.col-lg-5 -->
-                    <div class="col-lg-7">
-                        <div class="cta-one__content">
-                            <h3>FOR MORE INFORMATION & CUSTOM <br>
-                                PLANS PLEASE CALL</h3>
-                        </div><!-- /.cta-one__content -->
-                    </div><!-- /.col-lg-7 -->
-                </div><!-- /.row -->
-            </div><!-- /.inner-container -->
-        </div><!-- /.container -->
-    </section><!-- /.cta-one -->
-
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15871.58497240644!2d80.2507435!3d6.008983!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2891191b154bc9e1!2sPearl+Divers+PADI+Resort!5e0!3m2!1sen!2s!4v1463203215967" class="google-map__contact" allowfullscreen></iframe>
+     
     <?php include './footer.php'; ?>
+    
 </div><!-- /.page-wrapper -->
 
 
@@ -191,8 +170,8 @@
         <div class="side-menu__social">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-google-plus"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/unawatunadiving"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/pearldivers.lk/"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-pinterest-p"></i></a>
         </div>
     </div><!-- /.side-menu__block-inner -->

@@ -1,11 +1,16 @@
 <!DOCTYPE html>
+<?php
+include_once (dirname(__FILE__) . '/class/include.php');
+$RATES =new Page(7);
+
+?>
 <html lang="en" dir="ltr">
 
     <meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pricing Page || Scubo || Scuba Diving Centre HTML Template</title>
+        <title>Course Rates || Pearl Divers Sri Lanka</title>
 
         <!-- favicons -->
         <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
@@ -37,7 +42,7 @@
 
     <body>
         <div class="preloader">
-            <img src="assets/images/preloader.png" class="preloader__image" alt="">
+           <img src="assets/images/preload.PNG" width="150px" class="preloader__image" alt="">
         </div><!-- /.preloader -->
         <div class="page-wrapper">
 
@@ -58,49 +63,7 @@
               
                 <div class="container">
                     <div class="table-responsive">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Package</th>
-                                    <th>Rate</th>
-
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Extended Range</td>
-                                    <td>$25</td>
-                                </tr>
-                                <tr>
-                                    <td>PADI Discover Snorkeling</td>
-                                    <td>$35</td>
-                                </tr>
-                                <tr>
-                                    <td>Supplied Air Diving</td>
-                                    <td>$40</td>
-                                </tr>
-                                <tr>
-                                    <td>Fun Diving for Certified</td>
-                                    <td>$60</td>
-                                </tr>
-                                <tr>
-                                    <td>PADI Discover Skin Diver</td>
-                                    <td>$95</td>
-                                </tr>
-                                <tr>
-                                    <td>PADI Discover Scuba Diving</td>
-                                    <td>$89</td>
-                                </tr>
-                                <tr>
-                                    <td>Tandem Scuba Diver</td>
-                                    <td>$100</td>
-                                </tr>
-                                <tr>
-                                    <td>Recreatetional Hookah Diver</td>
-                                    <td>$125</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                  <?php echo $RATES->description;?>
                     </div><!-- /.table-responsive -->
                 </div><!-- /.container -->
             </section><!-- /.pricing-one -->

@@ -6,7 +6,7 @@
         <div class="topbar-one__social">
             <a href="https://www.facebook.com/pearldiversnwatersport/"><i class="fab fa-facebook-square"></i></a>
             <a href="https://twitter.com/unawatunadiving"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#"><i class="fab fa-tripadvisor"></i></a>
             <a href="https://www.instagram.com/pearldivers.lk/"><i class="fab fa-instagram"></i></a>
         </div><!-- /.topbar-one__social -->
     </div><!-- /.container -->
@@ -14,10 +14,10 @@
 
 <nav class="main-nav-one stricky">
     <div class="container">
-        <div class="main-nav-one__infos">
-            <a class="main-nav-one__infos-phone" href="tel:+ 94 91 22 42015"><i class="fa fa-phone-alt"></i>+ 94 91 22 42015</a>
-            <a class="main-nav-one__infos-email" href="mailto:needhelp@example.com"><i class="fa fa-envelope"></i>info@pearldivers.lk</a>
-        </div><!-- /.main-nav-one__infos -->
+<!--        <div class="main-nav-one__infos">
+            <a class="main-nav-one__infos-phone" href=""><i class="fa fa-phone-alt"></i></a>
+            <a class="main-nav-one__infos-email" href=""><i class="fa fa-envelope"></i></a>
+        </div> /.main-nav-one__infos -->
         <div class="inner-container">
             <div class="logo-box">
                 <a href="#">
@@ -31,25 +31,25 @@
                         <a href="./">Home</a>
 
                     </li>
-                    <li><a href="about-pearl-drivers.php">About</a></li>
+                    <li><a href="about-pearl-divers.php">About</a></li>
                     
                     <li class="dropdown">
                         <a href="">Courses</a>
                         <ul>
-                            <li><a href="pearl-drivers-courses.php">Courses</a></li>
-                            <li><a href="pearl-drivers-course-rates.php">Course Rates</a></li>
-                            <li><a href="pearl-drivers-dive-sites.php">Dive Sites</a></li>
+                            <li><a href="pearl-divers-courses.php">Courses</a></li>
+                            <li><a href="pearl-divers-course-rates.php">Course Rates</a></li>
+                            <li><a href="pearl-divers-dive-sites.php">Dive Sites</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="pearl-drivers-services.php">Services</a>
+                        <a href="pearl-divers-services.php">Services</a>
 
                     </li>
                     <li>
-                        <a href="pearl-drivers-gallery.php">Gallery</a>
+                        <a href="pearl-divers-gallery.php">Gallery</a>
 
                     </li>
-                    <li><a href="pearl-drivers-contact.php">Contact</a></li>
+                    <li><a href="pearl-divers-contact.php">Contact</a></li>
                 </ul><!-- /.main-nav__navigation-box -->
             </div><!-- /.main-nav__main-navigation -->
         </div><!-- /.inner-container -->
