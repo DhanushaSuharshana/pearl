@@ -37,7 +37,7 @@
 
     <body>
         <div class="preloader">
-            <img src="assets/images/preloader.png" class="preloader__image" alt="">
+       <img src="assets/images/preload.PNG" width="150px" class="preloader__image" alt="">
         </div><!-- /.preloader -->
         <div class="page-wrapper">
             <?php
@@ -185,7 +185,7 @@
             </div><!-- /.side-menu__block-overlay -->
             <div class="side-menu__block-inner ">
 
-                <a href="index-2.html" class="side-menu__logo"><img src="assets/images/logo-3-1.png" alt="" width="143"></a>
+                <a href="" class="side-menu__logo"><img src="assets/images/logo-3-1.png" alt="" width="143"></a>
                 <nav class="mobile-nav__container">
                     <!-- content is loading via js -->
                 </nav>

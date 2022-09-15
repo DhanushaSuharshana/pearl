@@ -36,7 +36,7 @@
 
     <body>
         <div class="preloader">
-            <img src="assets/images/preloader.png" class="preloader__image" alt="">
+             <img src="assets/images/preload.PNG" width="150px" class="preloader__image" alt="">
         </div><!-- /.preloader -->
         <div class="page-wrapper">
 

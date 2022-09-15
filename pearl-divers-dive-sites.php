@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+include_once (dirname(__FILE__) . '/class/include.php');
+?>
 <html lang="en" dir="ltr">
 
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
@@ -37,7 +40,7 @@
 
     <body>
         <div class="preloader">
-            <img src="assets/images/preloader.png" class="preloader__image" alt="">
+           <img src="assets/images/preload.PNG" width="150px" class="preloader__image" alt="">
         </div><!-- /.preloader -->
         <div class="page-wrapper">
 
@@ -70,23 +73,21 @@
                     <div class="col-lg-12">
                          <div class="comment-one">
                             <h3 class="comment-one__title">Dive Sites</h3><!-- /.comment-one__title -->
+                            <?php
+                            $ATTRACTION_OBJ =new Attraction(NULL);
+                            $ATTRACTION = $ATTRACTION_OBJ->all();
+                            foreach ($ATTRACTION as $attraction){
+                            ?>
                             <div class="comment-one__single">
-                                <img src="assets/images/blog/comment-1-1.jpg" alt="">
+                                <img src="upload/attraction/<?php echo $attraction['image_name'];?>" alt="">
                                 <div class="comment-one__top">
-                                    <h3>The Ralagala Wreck</h3> 
+                                    <h3><?php echo $attraction['title'];?></h3> 
                                 </div><!-- /.comment-one__top -->
-                                <p>Lorem Ipsum is simply dummy text of the rinting and typesetting been the industry standard
-                                    dummy text ever sincer condimentum purus. In non ex at ligula fringilla lobortis. </p>
+                                <p><?php echo $attraction['description'];?> </p>
                            </div><!-- /.comment-one__single -->
-                            <div class="comment-one__single">
-                                <img src="assets/images/blog/comment-1-2.jpg" alt="">
-                                <div class="comment-one__top">
-                                    <h3>The Galle Ship Wreck (Tango Wreck)</h3> 
-                                </div><!-- /.comment-one__top -->
-                                <p>Lorem Ipsum is simply dummy text of the rinting and typesetting been the industry standard
-                                    dummy text ever sincer condimentum purus. In non ex at ligula fringilla lobortis. </p>
-                             
-                            </div><!-- /.comment-one__single -->
+                       <?php
+                            }
+                       ?>
                         </div><!-- /.comment-one -->
                      
                     </div><!-- /.col-lg-8 -->
@@ -111,7 +112,7 @@
             </div><!-- /.side-menu__block-overlay -->
             <div class="side-menu__block-inner ">
 
-                <a href="index-2.html" class="side-menu__logo"><img src="assets/images/logo-3-1.png" alt="" width="143"></a>
+                <a href="" class="side-menu__logo"><img src="assets/images/logo-3-1.png" alt="" width="143"></a>
                 <nav class="mobile-nav__container">
                     <!-- content is loading via js -->
                 </nav>

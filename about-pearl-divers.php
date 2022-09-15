@@ -1,6 +1,12 @@
 <!DOCTYPE html>
+<?php
+include_once (dirname(__FILE__) . '/class/include.php');
+$ABOUT_DESCRIPTION_01 =new Page(1);
+$ABOUT_DESCRIPTION_02 =new Page(2);
+$ABOUT_IMAGE_AND_TEXT =new Page(3);
+?>
 <html lang="en" dir="ltr">
-    <meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +42,7 @@
 
     <body>
         <div class="preloader">
-            <img src="assets/images/preloader.png" class="preloader__image" alt="">
+             <img src="assets/images/preload.PNG" width="150px" class="preloader__image" alt="">
         </div><!-- /.preloader -->
         <div class="page-wrapper">
 
@@ -63,11 +69,10 @@
                     <div class="row">
                         <div class="col-xl-6">
                             <div class="cta-four__image wow fadeInLeft" data-wow-duration="1500ms">
-                                <img src="assets/images/resources/cta-2-1.jpg" alt="">
+                                <img src="upload/page/<?php echo $ABOUT_IMAGE_AND_TEXT->image_name;?>" alt="">
                                 <div class="cta-four__image-content">
                                     <i class="scubo-icon-scuba-diving"></i>
-                                    <p>36</p>
-                                    <h3>years of <br> experience</h3>
+                                 <?php echo $ABOUT_IMAGE_AND_TEXT->description;?>
                                 </div><!-- /.cta-four__image-content -->
                             </div><!-- /.cta-four__image -->
                         </div><!-- /.col-lg-6 -->
@@ -75,27 +80,20 @@
                             <div class="cta-four__content">
                                 <div class="block-title text-left">
                                     <img src="assets/images/shapes/sec-line-1.png" alt="">
-                                    <p class="text-uppercase">About scubo center</p>
+                                    <p class="text-uppercase">About dive center</p>
                                     <!--                                <h3 class="text-uppercase"></h3>-->
                                 </div><!-- /.block-title -->
-                                <p>We are a small, Sri Lankan owned and operated dive school based in Unawatuna on the south-western shores of the beautiful island of Sri Lanka.
-                                    Sumith Wijesena, manager & owner of the Unawatuna Dive Centre is dive certified in Germany and has over 22 years diving experience. Sumith gained valuable experience by setting up and managing another dive centre in Unawatuna before branching out and setting up on his own with his talented team of certified divers at the Unawatuna Dive Centre.<br>
-                                    The Dive Centre, as it is locally referred to is located at Unawatuna Bay which is considered to be one of the most beautiful beaches in the world. The Dive Center is only short drive away from the Unesco World Heritage Site, Galle Fort. From Colombo you can us reach us within a 50 minutes drive through the Southern Highway.<br>
-                                    For those who don’t dive we have lots of other pursuits to keep you occupied and entertained such as snorkeling, kayaking, fishing, boat tours, whale and dolphin watching, jet skis & water skiing. Kids and adults alike will love the glass bottom boat adventure and the turtle safari. If it is all too much you can just relax on one of our sunbeds and watch the sun go down over the temple at Roomasala head.
-                                </p>
+                                <p><?php echo $ABOUT_DESCRIPTION_01->description;?></p>
                                 <!-- /.thm-btn cta-four__btn -->
                             </div><!-- /.cta-four__content -->
                         </div><!-- /.col-lg-6 -->
-                    </div><!-- /.row -->
-                    <div class="row">
                         <div class="col-xl-12">
                             <div class="cta-four__content">
-                                <p><br>We have a brand new whale watching boat and can arrange daily private boat rental with your own captain. You can go beach hopping or just sail around and anchor in one of the beautiful bays while you have a picnic and a swim in the warm clear turquoise water of the Indian Ocean.
-                                    It should make you feel good to know that 15% of our boat profits go to a local charity “The Dog Care Clinic“ in Mihirpenna, Thalpe.
-                                    We want you to really enjoy your holidays here in Sri Lanka and would like you to join us on one of the great excursions and dive programs we have to offer.</p>
+                                <p><?php echo $ABOUT_DESCRIPTION_02->description;?></p>
                             </div>
                         </div>
-                    </div>
+                    </div><!-- /.row -->
+                   
                 </div><!-- /.container -->
             </section><!-- /.cta-four -->
 
@@ -221,7 +219,7 @@
         </div><!-- /.side-menu__block-overlay -->
         <div class="side-menu__block-inner ">
 
-            <a href="index-2.html" class="side-menu__logo"><img src="assets/images/logo-3-1.png" alt="" width="143"></a>
+            <a href="./" class="side-menu__logo"><img src="assets/images/logo-3-1.png" alt="" width="143"></a>
             <nav class="mobile-nav__container">
                 <!-- content is loading via js -->
             </nav>

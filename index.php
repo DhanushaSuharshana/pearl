@@ -1,6 +1,15 @@
+
 <!DOCTYPE html>
+<?php
+include_once (dirname(__FILE__) . '/class/include.php');
+$WELCOME_IMAGE_AND_TEXT = new Page(4);
+$WELCOME_DESCRIPTION = new Page(5);
+$HOW_TO_DIVE = new Page(6);
+$GALLERY_OBJ = new AlbumPhoto(NULL);
+$GALLERY = $GALLERY_OBJ->getAlbumPhotosById(2);
+?>
 <html lang="en" dir="ltr"> 
-  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,33 +56,24 @@
             <div class="slider-one__wrapper">
                 <div class="slider-one">
                     <div class="slider-one__carousel thm__owl-dot-1 owl-carousel owl-theme thm__owl-carousel" data-carousel-prev-btn=".slider-one__nav-right" data-carousel-next-btn=".slider-one__nav-left" data-options='{"loop": true, "items": 1, "margin": 0, "dots": true, "nav": false, "animateOut": &quot;slideOutDown&quot;, "animateIn": &quot;fadeIn&quot;, "active": true, "smartSpeed": 1000, "autoplay": true, "autoplayTimeout": 7000, "autoplayHoverPause": false}'>
-                        <div class="item slider-one__slide-1" style="background-image: url(assets/images/background/3.jpg);">
-                            <div class="container">
-                                <div class="slider-one__content text-center">
-                                    <p class="anim-elm">Pearl Divers Sri Lanka</p>
-                                    <h3 class="anim-elm">a new discovery <br> awaits</h3>
+                        <?php
+                        $SLIDER_OBJ = new Slider(NULL);
+                        $SLIDER = $SLIDER_OBJ->all();
+                        foreach ($SLIDER as $key => $slider) {
+                            ?>
+                            <div class="item slider-one__slide-1" style="background-image: url(upload/slider/<?php echo $slider['image_name']; ?>);">
+                                <div class="container">
+                                    <div class="slider-one__content text-center">
+                                        <p class="anim-elm"><?php echo $slider['description']; ?></p>
+                                        <h3 class="anim-elm"><?php echo $slider['title']; ?></h3>
 
-                                </div><!-- /.slider-one__content text-center -->
-                            </div><!-- /.container -->
-                        </div><!-- /.item -->
-                        <div class="item slider-one__slide-2" style="background-image: url(assets/images/background/2.jpg);">
-                            <div class="container">
-                                <div class="slider-one__content text-center">
-                                    <p class="anim-elm">Pearl Divers Sri Lanka</p>
-                                    <h3 class="anim-elm">a new discovery <br> awaits</h3>
+                                    </div><!-- /.slider-one__content text-center -->
+                                </div><!-- /.container -->
+                            </div><!-- /.item -->
+                            <?php
+                        }
+                        ?>
 
-                                </div><!-- /.slider-one__content text-center -->
-                            </div><!-- /.container -->
-                        </div><!-- /.item -->
-                        <div class="item slider-one__slide-1" style="background-image: url(assets/images/background/1.jpg);">
-                            <div class="container">
-                                <div class="slider-one__content text-center">
-                                    <p class="anim-elm">Pearl Divers Sri Lanka</p>
-                                    <h3 class="anim-elm">a new discovery <br> awaits</h3>
-
-                                </div><!-- /.slider-one__content text-center -->
-                            </div><!-- /.container -->
-                        </div><!-- /.item -->
                     </div><!-- /.slider-one__carousel -->
                     <div class="slider-one__nav">
                         <a href="#" class="slider-one__nav-left"><i class="fa fa-angle-right"></i></a>
@@ -137,8 +137,7 @@
                             <div class="about-three__image">
                                 <img src="assets/images/resources/about-1-1.jpg" alt="">
                                 <div class="about-three__image-content">
-                                    <h3>30</h3>
-                                    <p>Years of <br> Experience</p>
+                                    <?php echo $WELCOME_IMAGE_AND_TEXT->description; ?>
                                 </div><!-- /.about-three__image-content -->
                             </div><!-- /.about-three__image -->
                         </div><!-- /.col-lg-6 -->
@@ -149,7 +148,7 @@
                                     <p class="text-uppercase">Our Introduction </p>
                                     <h3 class="text-uppercase">Welcome to <br> Scuba Diving Center</h3>
                                 </div><!-- /.block-title -->
-                                <p>There are many variations of passages of available but the majority have suffered alteration in some form, by injected or randomised words which don look even slightly believable. If you are going to use a passage of lorem ipsum.</p>
+                                <p><?php echo $WELCOME_DESCRIPTION->description; ?></p>
                                 <div class="topbar-one__social" style="margin-top: 20px; margin-bottom: 20px">
                                     <a href="#"><img width="40px" src="https://www.pearldivers.lk/images/facebook.png"></a>
                                     <a href="#"><img width="40px" src="https://www.pearldivers.lk/images/instagram.png"></a>
@@ -163,11 +162,11 @@
                                         <li><i class="fa fa-angle-right"></i> If Majority over the years.</li>
                                     </ul> /.list-unstyled about-three__list -->
 
-                                <p>Hot Line: <a href="tel:666-888-0000">+ 94 91 22 42015</a></p>
-                                <p>Mobile 1: <a href="tel:666-888-0000">+ 94 727 90 34 30</a></p>
-                                <p>Mobile 2: <a href="tel:666-888-0000">+ 94 777 90 34 30</a></p>
+                                <p>Hot Line: <a href="tel:+ 94 91 22 42015">+ 94 91 22 42015</a></p>
+                                <p>Mobile 1: <a href="tel:+ 94 727 90 34 30">+ 94 727 90 34 30</a></p>
+                                <p>Mobile 2: <a href="tel:+ 94 777 90 34 30">+ 94 777 90 34 30</a></p>
 
-                                <a href="courses.html" class="about-three__btn thm-btn">About Us</a> 
+                                <a href="about-pearl-drivers.php" class="about-three__btn thm-btn">About Us</a> 
                             </div><!-- /.about-three__content -->
                         </div><!-- /.col-lg-6 -->
                     </div><!-- /.row -->
@@ -190,10 +189,8 @@
                                     <p class="text-uppercase">learn with us</p>
                                     <h3 class="text-uppercase">How to dive?</h3>
                                 </div><!-- /.block-title -->
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                                    alteration in some form, by injected humour, or randomised words which don't look even slightly
-                                    believable.</p>
-                                <a href="contact.html" class="thm-btn video-two__btn">Contact us</a>
+                                <p><?php echo $HOW_TO_DIVE->description; ?></p>
+                                <a href="pearl-drivers-contact.php" class="thm-btn video-two__btn">Contact us</a>
                                 <!-- /.thm-btn video-two__btn -->
                             </div><!-- /.video-two__content -->
                         </div><!-- /.col-lg-6 -->
@@ -230,97 +227,97 @@
                         <div class="item">
                             <div class="course-one__single">
                                 <div class="course-one__image">
-                                    <a href="course-details.html" class="course-one__cat">advanced</a>
+                                    <a href="" class="course-one__cat">advanced</a>
                                     <div class="course-one__image-inner">
                                         <img src="assets/images/courses/course-1-1.jpg" alt="">
-                                        <a href="course-details.html"><i class="scubo-icon-plus-symbol"></i></a>
+                                        <a href=""><i class="scubo-icon-plus-symbol"></i></a>
                                     </div><!-- /.course-one__image-inner -->
                                 </div><!-- /.course-one__image -->
                                 <div class="course-one__content hvr-sweep-to-bottom">
-                                    <h3><a href="course-details.html">Scuba diving</a></h3>
+                                    <h3><a href="">Scuba diving</a></h3>
                                     <p>There are many variatin of passages of lorem ipsum available, but the majority have.</p>
                                 </div><!-- /.course-one__content -->
-                                <a href="contact.html" class="course-one__book-link">Book this course</a>
+                                <a href="" class="course-one__book-link">Book this course</a>
                             </div><!-- /.course-one__single -->
                         </div><!-- /.item -->
                         <div class="item">
                             <div class="course-one__single">
                                 <div class="course-one__image">
-                                    <a href="course-details.html" class="course-one__cat">beginner</a>
+                                    <a href="" class="course-one__cat">beginner</a>
                                     <div class="course-one__image-inner">
                                         <img src="assets/images/courses/course-1-2.jpg" alt="">
-                                        <a href="course-details.html"><i class="scubo-icon-plus-symbol"></i></a>
+                                        <a href=""><i class="scubo-icon-plus-symbol"></i></a>
                                     </div><!-- /.course-one__image-inner -->
                                 </div><!-- /.course-one__image -->
                                 <div class="course-one__content hvr-sweep-to-bottom">
-                                    <h3><a href="course-details.html">Extended range</a></h3>
+                                    <h3><a href="">Extended range</a></h3>
                                     <p>There are many variatin of passages of lorem ipsum available, but the majority have.</p>
                                 </div><!-- /.course-one__content -->
-                                <a href="contact.html" class="course-one__book-link">Book this course</a>
+                                <a href="" class="course-one__book-link">Book this course</a>
                             </div><!-- /.course-one__single -->
                         </div><!-- /.item -->
                         <div class="item">
                             <div class="course-one__single">
                                 <div class="course-one__image">
-                                    <a href="course-details.html" class="course-one__cat">Professional</a>
+                                    <a href="" class="course-one__cat">Professional</a>
                                     <div class="course-one__image-inner">
                                         <img src="assets/images/courses/course-1-3.jpg" alt="">
-                                        <a href="course-details.html"><i class="scubo-icon-plus-symbol"></i></a>
+                                        <a href=""><i class="scubo-icon-plus-symbol"></i></a>
                                     </div><!-- /.course-one__image-inner -->
                                 </div><!-- /.course-one__image -->
                                 <div class="course-one__content hvr-sweep-to-bottom">
-                                    <h3><a href="course-details.html">free diving</a></h3>
+                                    <h3><a href="">free diving</a></h3>
                                     <p>There are many variatin of passages of lorem ipsum available, but the majority have.</p>
                                 </div><!-- /.course-one__content -->
-                                <a href="contact.html" class="course-one__book-link">Book this course</a>
+                                <a href="" class="course-one__book-link">Book this course</a>
                             </div><!-- /.course-one__single -->
                         </div><!-- /.item -->
                         <div class="item">
                             <div class="course-one__single">
                                 <div class="course-one__image">
-                                    <a href="course-details.html" class="course-one__cat">advanced</a>
+                                    <a href="" class="course-one__cat">advanced</a>
                                     <div class="course-one__image-inner">
                                         <img src="assets/images/courses/course-1-4.jpg" alt="">
-                                        <a href="course-details.html"><i class="scubo-icon-plus-symbol"></i></a>
+                                        <a href=""><i class="scubo-icon-plus-symbol"></i></a>
                                     </div><!-- /.course-one__image-inner -->
                                 </div><!-- /.course-one__image -->
                                 <div class="course-one__content hvr-sweep-to-bottom">
-                                    <h3><a href="course-details.html">Rebreather</a></h3>
+                                    <h3><a href="">Rebreather</a></h3>
                                     <p>There are many variatin of passages of lorem ipsum available, but the majority have.</p>
                                 </div><!-- /.course-one__content -->
-                                <a href="contact.html" class="course-one__book-link">Book this course</a>
+                                <a href="" class="course-one__book-link">Book this course</a>
                             </div><!-- /.course-one__single -->
                         </div><!-- /.item -->
                         <div class="item">
                             <div class="course-one__single">
                                 <div class="course-one__image">
-                                    <a href="course-details.html" class="course-one__cat">advanced</a>
+                                    <a href="" class="course-one__cat">advanced</a>
                                     <div class="course-one__image-inner">
                                         <img src="assets/images/courses/course-1-5.jpg" alt="">
-                                        <a href="course-details.html"><i class="scubo-icon-plus-symbol"></i></a>
+                                        <a href=""><i class="scubo-icon-plus-symbol"></i></a>
                                     </div><!-- /.course-one__image-inner -->
                                 </div><!-- /.course-one__image -->
                                 <div class="course-one__content hvr-sweep-to-bottom">
-                                    <h3><a href="course-details.html">Swimming</a></h3>
+                                    <h3><a href="">Swimming</a></h3>
                                     <p>There are many variatin of passages of lorem ipsum available, but the majority have.</p>
                                 </div><!-- /.course-one__content -->
-                                <a href="contact.html" class="course-one__book-link">Book this course</a>
+                                <a href="" class="course-one__book-link">Book this course</a>
                             </div><!-- /.course-one__single -->
                         </div><!-- /.item -->
                         <div class="item">
                             <div class="course-one__single">
                                 <div class="course-one__image">
-                                    <a href="course-details.html" class="course-one__cat">Professional</a>
+                                    <a href="" class="course-one__cat">Professional</a>
                                     <div class="course-one__image-inner">
                                         <img src="assets/images/courses/course-1-6.jpg" alt="">
-                                        <a href="course-details.html"><i class="scubo-icon-plus-symbol"></i></a>
+                                        <a href=""><i class="scubo-icon-plus-symbol"></i></a>
                                     </div><!-- /.course-one__image-inner -->
                                 </div><!-- /.course-one__image -->
                                 <div class="course-one__content hvr-sweep-to-bottom">
-                                    <h3><a href="course-details.html">Snorkeling</a></h3>
+                                    <h3><a href="">Snorkeling</a></h3>
                                     <p>There are many variatin of passages of lorem ipsum available, but the majority have.</p>
                                 </div><!-- /.course-one__content -->
-                                <a href="contact.html" class="course-one__book-link">Book this course</a>
+                                <a href="" class="course-one__book-link">Book this course</a>
                             </div><!-- /.course-one__single -->
                         </div><!-- /.item -->
                     </div><!-- /.course-one__carousel thm__owl-carousel owl-carousel owl-theme -->
@@ -371,12 +368,28 @@
             <section class="testimonials-one__title testimonials-one__title__home-one">
                 <div class="testimonials-one__bg" style="background-image: url(assets/images/shapes/water-wave-bg.png);"></div>
                 <!-- /.testimonials-one__bg -->
-                <div class="container">
-                    <div class="block-title text-center">
+
+                <div class="container ">
+                    <div class="row">
+                    <div class="col-xl-8 col-md-6 col-xs-12">
+                    <div class="block-title text-left">
                         <img src="assets/images/shapes/sec-line-1.png" alt="">
                         <p class="text-uppercase">Testimonials</p>
                         <h3 class="text-uppercase">What they say</h3>
                     </div><!-- /.block-title -->
+                    <div class="text-block">
+                        <p class="m-0">There are many variations of passages of available but the majority have suffered <br>
+                            alteration in some form, by injected or randomised words which don look even <br> slightly believable.
+                        </p>
+                    </div><!-- /.text-block -->
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-xs-12">
+                    <div class="block-title text-right">
+                        <a href="pearl-divers-testimonial.php" class="thm-btn cta-five__btn">View more</a>
+                    </div>
+                    </div>
+                    </div>
+                        <!-- /.block-title -->
                 </div><!-- /.container -->
             </section><!-- /.testimonials-one__title -->
 
@@ -384,205 +397,35 @@
             <section class="testimonials-one__carousel-wrapper testimonials-one__carousel-wrapper__home-one">
                 <div class="container wow fadeIn" data-wow-duration="2000ms">
                     <div class="testimonials-one__carousel owl-carousel owl-theme thm__owl-carousel thm__owl-dot-2" data-options='{"items": 3, "margin": 30, "loop": true, "autoplay": true, "autoplayTimeout": 5000, "autoplayHoverPause": true, "smartSpeed": 700, "responsive": {"0": {"items": 1, "dots": false, "nav": true}, "480": {"items": 1, "dots": false, "nav": true}, "767": {"items": 1, "dots": false, "nav": true}, "991": {"items": 2}, "1199": {"items": 3, "margin": 30}}}'>
+                                    <?php
+                        $COMMENT_OBJ =new Comments(NULL);
+                        $COMMENT =$COMMENT_OBJ->all();
+                        foreach ($COMMENT as $comment){
+                         ?>
                         <div class="item">
                             <div class="testimonials-one__single">
                                 <div class="testimonials-one__content">
                                     <div class="testimonials-one__content-inner">
                                         <div class="testimonials-one__qoute"></div><!-- /.testimonials-one__qoute -->
-                                        <p>I don’t know what else to say, this is something you have never seen before.</p>
+                                        <p><?php echo substr($comment['comment'], 0, 130).'....'; ?></p>
                                         <div class="testimonials-one__infos">
                                             <div class="testimonials-one__image">
                                                 <div class="testimonials-one__image-inner">
-                                                    <img src="assets/images/resources/testi-1-1.jpg" alt="">
+                                                    <img src="upload/comments/<?php echo $comment['image_name']; ?>" alt="">
                                                 </div><!-- /.testimonials-one__image-inner -->
                                             </div><!-- /.testimonials-one__image -->
                                             <div class="testimonials-one__infos-content">
-                                                <h3>Edwin Walsh</h3>
-                                                <span>Swimmer</span>
+                                                <h3><?php echo $comment['title']; ?></h3>
+                                                <span><?php echo $comment['name']; ?></span>
                                             </div><!-- /.testimonials-one__infos-content -->
                                         </div><!-- /.testimonials-one__infos -->
                                     </div><!-- /.testimonials-one__content-inner -->
                                 </div><!-- /.testimonials-one__content -->
                             </div><!-- /.testimonials-one__single -->
                         </div><!-- /.item -->
-                        <div class="item">
-                            <div class="testimonials-one__single">
-                                <div class="testimonials-one__content">
-                                    <div class="testimonials-one__content-inner">
-                                        <div class="testimonials-one__qoute"></div><!-- /.testimonials-one__qoute -->
-                                        <p>This is due to their excellent service, competitive pricing and customer support. It’s
-                                            throughly refresing to get new such a personal touch. </p>
-                                        <div class="testimonials-one__infos">
-                                            <div class="testimonials-one__image">
-                                                <div class="testimonials-one__image-inner">
-                                                    <img src="assets/images/resources/testi-1-2.jpg" alt="">
-                                                </div><!-- /.testimonials-one__image-inner -->
-                                            </div><!-- /.testimonials-one__image -->
-                                            <div class="testimonials-one__infos-content">
-                                                <h3>Joel Moore</h3>
-                                                <span>Swimmer</span>
-                                            </div><!-- /.testimonials-one__infos-content -->
-                                        </div><!-- /.testimonials-one__infos -->
-                                    </div><!-- /.testimonials-one__content-inner -->
-                                </div><!-- /.testimonials-one__content -->
-                            </div><!-- /.testimonials-one__single -->
-                        </div><!-- /.item -->
-                        <div class="item">
-                            <div class="testimonials-one__single">
-                                <div class="testimonials-one__content">
-                                    <div class="testimonials-one__content-inner">
-                                        <div class="testimonials-one__qoute"></div><!-- /.testimonials-one__qoute -->
-                                        <p>I don’t know what else to say, this is something you have never seen before.</p>
-                                        <div class="testimonials-one__infos">
-                                            <div class="testimonials-one__image">
-                                                <div class="testimonials-one__image-inner">
-                                                    <img src="assets/images/resources/testi-1-3.jpg" alt="">
-                                                </div><!-- /.testimonials-one__image-inner -->
-                                            </div><!-- /.testimonials-one__image -->
-                                            <div class="testimonials-one__infos-content">
-                                                <h3>Pauline Cross</h3>
-                                                <span>Swimmer</span>
-                                            </div><!-- /.testimonials-one__infos-content -->
-                                        </div><!-- /.testimonials-one__infos -->
-                                    </div><!-- /.testimonials-one__content-inner -->
-                                </div><!-- /.testimonials-one__content -->
-                            </div><!-- /.testimonials-one__single -->
-                        </div><!-- /.item -->
-                        <div class="item">
-                            <div class="testimonials-one__single">
-                                <div class="testimonials-one__content">
-                                    <div class="testimonials-one__content-inner">
-                                        <div class="testimonials-one__qoute"></div><!-- /.testimonials-one__qoute -->
-                                        <p>I was very impresed by the Scubo diving service, lorem ipsum is simply free text used by
-                                            copytyping.</p>
-                                        <div class="testimonials-one__infos">
-                                            <div class="testimonials-one__image">
-                                                <div class="testimonials-one__image-inner">
-                                                    <img src="assets/images/resources/testi-1-4.jpg" alt="">
-                                                </div><!-- /.testimonials-one__image-inner -->
-                                            </div><!-- /.testimonials-one__image -->
-                                            <div class="testimonials-one__infos-content">
-                                                <h3>Alex Maldonado</h3>
-                                                <span>Swimmer</span>
-                                            </div><!-- /.testimonials-one__infos-content -->
-                                        </div><!-- /.testimonials-one__infos -->
-                                    </div><!-- /.testimonials-one__content-inner -->
-                                </div><!-- /.testimonials-one__content -->
-                            </div><!-- /.testimonials-one__single -->
-                        </div><!-- /.item -->
-                        <div class="item">
-                            <div class="testimonials-one__single">
-                                <div class="testimonials-one__content">
-                                    <div class="testimonials-one__content-inner">
-                                        <div class="testimonials-one__qoute"></div><!-- /.testimonials-one__qoute -->
-                                        <p>This is due to their excellent service, competitive pricing and customer support. It’s
-                                            throughly refresing to get new such a personal touch.
-                                        </p>
-                                        <div class="testimonials-one__infos">
-                                            <div class="testimonials-one__image">
-                                                <div class="testimonials-one__image-inner">
-                                                    <img src="assets/images/resources/testi-1-1.jpg" alt="">
-                                                </div><!-- /.testimonials-one__image-inner -->
-                                            </div><!-- /.testimonials-one__image -->
-                                            <div class="testimonials-one__infos-content">
-                                                <h3>Marion Price</h3>
-                                                <span>Swimmer</span>
-                                            </div><!-- /.testimonials-one__infos-content -->
-                                        </div><!-- /.testimonials-one__infos -->
-                                    </div><!-- /.testimonials-one__content-inner -->
-                                </div><!-- /.testimonials-one__content -->
-                            </div><!-- /.testimonials-one__single -->
-                        </div><!-- /.item -->
-                        <div class="item">
-                            <div class="testimonials-one__single">
-                                <div class="testimonials-one__content">
-                                    <div class="testimonials-one__content-inner">
-                                        <div class="testimonials-one__qoute"></div><!-- /.testimonials-one__qoute -->
-                                        <p>I was very impresed by the Scubo diving service, lorem ipsum is simply free text used by
-                                            copytyping.</p>
-                                        <div class="testimonials-one__infos">
-                                            <div class="testimonials-one__image">
-                                                <div class="testimonials-one__image-inner">
-                                                    <img src="assets/images/resources/testi-1-2.jpg" alt="">
-                                                </div><!-- /.testimonials-one__image-inner -->
-                                            </div><!-- /.testimonials-one__image -->
-                                            <div class="testimonials-one__infos-content">
-                                                <h3>Lou Morrison</h3>
-                                                <span>Swimmer</span>
-                                            </div><!-- /.testimonials-one__infos-content -->
-                                        </div><!-- /.testimonials-one__infos -->
-                                    </div><!-- /.testimonials-one__content-inner -->
-                                </div><!-- /.testimonials-one__content -->
-                            </div><!-- /.testimonials-one__single -->
-                        </div><!-- /.item -->
-                        <div class="item">
-                            <div class="testimonials-one__single">
-                                <div class="testimonials-one__content">
-                                    <div class="testimonials-one__content-inner">
-                                        <div class="testimonials-one__qoute"></div><!-- /.testimonials-one__qoute -->
-                                        <p>This is due to their excellent service, competitive pricing and customer support. It’s
-                                            throughly refresing to get new such a personal touch.
-                                        </p>
-                                        <div class="testimonials-one__infos">
-                                            <div class="testimonials-one__image">
-                                                <div class="testimonials-one__image-inner">
-                                                    <img src="assets/images/resources/testi-1-3.jpg" alt="">
-                                                </div><!-- /.testimonials-one__image-inner -->
-                                            </div><!-- /.testimonials-one__image -->
-                                            <div class="testimonials-one__infos-content">
-                                                <h3>Hunter Marsh</h3>
-                                                <span>Swimmer</span>
-                                            </div><!-- /.testimonials-one__infos-content -->
-                                        </div><!-- /.testimonials-one__infos -->
-                                    </div><!-- /.testimonials-one__content-inner -->
-                                </div><!-- /.testimonials-one__content -->
-                            </div><!-- /.testimonials-one__single -->
-                        </div><!-- /.item -->
-                        <div class="item">
-                            <div class="testimonials-one__single">
-                                <div class="testimonials-one__content">
-                                    <div class="testimonials-one__content-inner">
-                                        <div class="testimonials-one__qoute"></div><!-- /.testimonials-one__qoute -->
-                                        <p>I was very impresed by the Scubo diving service, lorem ipsum is simply free text used by
-                                            copytyping.</p>
-                                        <div class="testimonials-one__infos">
-                                            <div class="testimonials-one__image">
-                                                <div class="testimonials-one__image-inner">
-                                                    <img src="assets/images/resources/testi-1-4.jpg" alt="">
-                                                </div><!-- /.testimonials-one__image-inner -->
-                                            </div><!-- /.testimonials-one__image -->
-                                            <div class="testimonials-one__infos-content">
-                                                <h3>Jesse Buchanan</h3>
-                                                <span>Swimmer</span>
-                                            </div><!-- /.testimonials-one__infos-content -->
-                                        </div><!-- /.testimonials-one__infos -->
-                                    </div><!-- /.testimonials-one__content-inner -->
-                                </div><!-- /.testimonials-one__content -->
-                            </div><!-- /.testimonials-one__single -->
-                        </div><!-- /.item -->
-                        <div class="item">
-                            <div class="testimonials-one__single">
-                                <div class="testimonials-one__content">
-                                    <div class="testimonials-one__content-inner">
-                                        <div class="testimonials-one__qoute"></div><!-- /.testimonials-one__qoute -->
-                                        <p>This is due to their excellent service, competitive pricing and customer support. It’s
-                                            throughly refresing to get new such a personal touch.
-                                        </p>
-                                        <div class="testimonials-one__infos">
-                                            <div class="testimonials-one__image">
-                                                <div class="testimonials-one__image-inner">
-                                                    <img src="assets/images/resources/testi-1-1.jpg" alt="">
-                                                </div><!-- /.testimonials-one__image-inner -->
-                                            </div><!-- /.testimonials-one__image -->
-                                            <div class="testimonials-one__infos-content">
-                                                <h3>Helena Dawson</h3>
-                                                <span>Swimmer</span>
-                                            </div><!-- /.testimonials-one__infos-content -->
-                                        </div><!-- /.testimonials-one__infos -->
-                                    </div><!-- /.testimonials-one__content-inner -->
-                                </div><!-- /.testimonials-one__content -->
-                            </div><!-- /.testimonials-one__single -->
-                        </div><!-- /.item -->
+                         <?php 
+                        }
+                        ?>
                     </div><!-- /.testimonials-one__carousel owl-carousel owl-theme thm__owl-carousel -->
                 </div><!-- /.container -->
             </section><!-- /.testimonials-one__carousel-wrapper -->
@@ -593,25 +436,15 @@
             <section class="brand-one brand-one__home-one">
                 <div class="container">
                     <div class="brand-one__carousel owl-carousel thm__owl-carousel owl-theme" data-options='{"loop": true, "autoplay": true, "autoplayHoverPause": true, "autoplayTimeout": 5000, "items": 6, "dots": false, "nav": false, "margin": 0, "smartSpeed": 700, "responsive": { "0": {"items": 2, "margin": 5}, "480": {"items": 3, "margin": 5}, "991": {"items": 4, "margin": 5}, "1199": {"items": 5, "margin": 5}}}'>
+                       <?php
+                    foreach ($GALLERY as $gallery) {
+                        ?>
                         <div class="item">
-                            <img src="assets/images/gallery/1.PNG" alt="">
+                            <img src="upload/photo-album/gallery/thumb/<?php echo $gallery['image_name']?>" alt="">
                         </div><!-- /.item -->
-                        <div class="item">
-                            <img src="assets/images/gallery/2.PNG" alt="">
-                        </div><!-- /.item -->
-                        <div class="item">
-                            <img src="assets/images/gallery/3.PNG" alt="">
-                        </div><!-- /.item -->
-                        <div class="item">
-                            <img src="assets/images/gallery/4.png" alt="">
-                        </div><!-- /.item -->
-                        <div class="item">
-                            <img src="assets/images/gallery/5.png" alt="">
-                        </div><!-- /.item -->
-                        <div class="item">
-                            <img src="assets/images/gallery/6.png" alt="">
-                        </div><!-- /.item -->
-                        
+                     <?php
+                    }
+                     ?>
                     </div><!-- /.brand-one__carousel owl-carousel thm__owl-carousel owl-theme -->
                 </div><!-- /.container -->
             </section><!-- /.brand-one -->
@@ -632,7 +465,7 @@
             </div><!-- /.side-menu__block-overlay -->
             <div class="side-menu__block-inner ">
 
-                <a href="index.html" class="side-menu__logo"><img src="assets/images/preload.PNG" alt="" width="110"></a>
+                <a href="index.php" class="side-menu__logo"><img src="assets/images/preload.PNG" alt="" width="110"></a>
                 <nav class="mobile-nav__container">
                     <!-- content is loading via js -->
                 </nav>

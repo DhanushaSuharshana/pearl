@@ -1,6 +1,11 @@
 <!DOCTYPE html>
+<?php
+include_once (dirname(__FILE__) . '/class/include.php');
+$GALLERY_OBJ = new AlbumPhoto(NULL);
+$GALLERY = $GALLERY_OBJ->getAlbumPhotosById(2);
+?>
 <html lang="en" dir="ltr">
-<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +41,7 @@
 
 <body>
     <div class="preloader">
-        <img src="assets/images/preloader.png" class="preloader__image" alt="">
+        <img src="assets/images/preload.PNG" width="150px" class="preloader__image" alt="">
     </div><!-- /.preloader -->
     <div class="page-wrapper">
 <?php include './header.php';?>
@@ -56,60 +61,19 @@
         <section class="gallery-one">
             <div class="container">
                 <div class="row">
+                  <?php
+                    foreach ($GALLERY as $gallery) {
+                        ?>
                     <div class="col-lg-4 col-md-6">
                         <div class="gallery-one__single">
-                            <img src="assets/images/gallery/gallery-1-1.jpg" alt="">
-                            <a href="assets/images/gallery/gallery-1-1.jpg" class="img-popup"><i class="scubo-icon-plus-symbol"></i></a>
+                      
+                            <img src="upload/photo-album/gallery/thumb/<?php echo $gallery['image_name']?>" alt="">
+                            <a href="upload/photo-album/gallery/<?php echo $gallery['image_name']?>" class="img-popup"><i class="scubo-icon-plus-symbol"></i></a>
+       
                         </div><!-- /.gallery-one__single -->
                     </div><!-- /.col-lg-4 col-md-6 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="gallery-one__single">
-                            <img src="assets/images/gallery/gallery-1-2.jpg" alt="">
-                            <a href="assets/images/gallery/gallery-1-2.jpg" class="img-popup"><i class="scubo-icon-plus-symbol"></i></a>
-                        </div><!-- /.gallery-one__single -->
-                    </div><!-- /.col-lg-4 col-md-6 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="gallery-one__single">
-                            <img src="assets/images/gallery/gallery-1-3.jpg" alt="">
-                            <a href="assets/images/gallery/gallery-1-3.jpg" class="img-popup"><i class="scubo-icon-plus-symbol"></i></a>
-                        </div><!-- /.gallery-one__single -->
-                    </div><!-- /.col-lg-4 col-md-6 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="gallery-one__single">
-                            <img src="assets/images/gallery/gallery-1-4.jpg" alt="">
-                            <a href="assets/images/gallery/gallery-1-4.jpg" class="img-popup"><i class="scubo-icon-plus-symbol"></i></a>
-                        </div><!-- /.gallery-one__single -->
-                    </div><!-- /.col-lg-4 col-md-6 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="gallery-one__single">
-                            <img src="assets/images/gallery/gallery-1-5.jpg" alt="">
-                            <a href="assets/images/gallery/gallery-1-5.jpg" class="img-popup"><i class="scubo-icon-plus-symbol"></i></a>
-                        </div><!-- /.gallery-one__single -->
-                    </div><!-- /.col-lg-4 col-md-6 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="gallery-one__single">
-                            <img src="assets/images/gallery/gallery-1-6.jpg" alt="">
-                            <a href="assets/images/gallery/gallery-1-6.jpg" class="img-popup"><i class="scubo-icon-plus-symbol"></i></a>
-                        </div><!-- /.gallery-one__single -->
-                    </div><!-- /.col-lg-4 col-md-6 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="gallery-one__single">
-                            <img src="assets/images/gallery/gallery-1-7.jpg" alt="">
-                            <a href="assets/images/gallery/gallery-1-7.jpg" class="img-popup"><i class="scubo-icon-plus-symbol"></i></a>
-                        </div><!-- /.gallery-one__single -->
-                    </div><!-- /.col-lg-4 col-md-6 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="gallery-one__single">
-                            <img src="assets/images/gallery/gallery-1-8.jpg" alt="">
-                            <a href="assets/images/gallery/gallery-1-8.jpg" class="img-popup"><i class="scubo-icon-plus-symbol"></i></a>
-                        </div><!-- /.gallery-one__single -->
-                    </div><!-- /.col-lg-4 col-md-6 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="gallery-one__single">
-                            <img src="assets/images/gallery/gallery-1-9.jpg" alt="">
-                            <a href="assets/images/gallery/gallery-1-9.jpg" class="img-popup"><i class="scubo-icon-plus-symbol"></i></a>
-                        </div><!-- /.gallery-one__single -->
-                    </div><!-- /.col-lg-4 col-md-6 -->
+ <?php 
+                    }?>
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </section><!-- /.gallery-one -->
@@ -130,7 +94,7 @@
         </div><!-- /.side-menu__block-overlay -->
         <div class="side-menu__block-inner ">
 
-            <a href="index-2.html" class="side-menu__logo"><img src="assets/images/logo-3-1.png" alt="" width="143"></a>
+            <a href="" class="side-menu__logo"><img src="assets/images/logo-3-1.png" alt="" width="143"></a>
             <nav class="mobile-nav__container">
                 <!-- content is loading via js -->
             </nav>
