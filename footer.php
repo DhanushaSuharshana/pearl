@@ -28,9 +28,9 @@
                     <div class="footer-widget__inner">
                         <h3 class="footer-widget__title">Quick Link</h3><!-- /.footer-widget__title -->
                         <ul class="footer-widget__links-list list-unstyled">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="about-pearl-divers.php">About Us</a></li>
+                            <li><a href="pearl-divers-services.php">Services</a></li>
+                            <li><a href="pearl-divers-contact.php">Contact</a></li>
                         </ul><!-- /.footer-widget__links-list -->
                     </div><!-- /.footer-widget__inner -->
                 </div><!-- /.footer-widget -->
@@ -69,7 +69,7 @@
                         <div class="footer-widget__social">
                             <a href="https://twitter.com/unawatunadiving"><i class="fab fa-twitter"></i></a>
                             <a href="https://www.facebook.com/pearldiversnwatersport/"><i class="fab fa-facebook-square"></i></a>
-                            <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                            <a href="https://www.tripadvisor.com/Attraction_Review-g644047-d3698397-Reviews-Pearl_Divers-Unawatuna_Galle_District_Southern_Province.html"><i class="fab fa-tripadvisor"></i></a>
                             <a href="https://www.instagram.com/pearldivers.lk/"><i class="fab fa-instagram"></i></a>
                         </div><!-- /.footer-widget__social -->
                     </div><!-- /.footer-widget__inner -->

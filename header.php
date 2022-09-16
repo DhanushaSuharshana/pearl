@@ -6,7 +6,7 @@
         <div class="topbar-one__social">
             <a href="https://www.facebook.com/pearldiversnwatersport/"><i class="fab fa-facebook-square"></i></a>
             <a href="https://twitter.com/unawatunadiving"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-tripadvisor"></i></a>
+            <a href="https://www.tripadvisor.com/Attraction_Review-g644047-d3698397-Reviews-Pearl_Divers-Unawatuna_Galle_District_Southern_Province.html"><i class="fab fa-tripadvisor"></i></a>
             <a href="https://www.instagram.com/pearldivers.lk/"><i class="fab fa-instagram"></i></a>
         </div><!-- /.topbar-one__social -->
     </div><!-- /.container -->
@@ -31,8 +31,13 @@
                         <a href="./">Home</a>
 
                     </li>
-                    <li><a href="about-pearl-divers.php">About</a></li>
-                    
+                    <li class="dropdown">
+                        <a href="">About</a>
+                        <ul>
+                            <li><a href="about-pearl-divers.php">About</a></li>
+                            <li><a href="pearl-divers-team.php">Our Team</a></li>
+                        </ul>
+                    </li>
                     <li class="dropdown">
                         <a href="">Courses</a>
                         <ul>
