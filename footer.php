@@ -38,9 +38,17 @@
                     <div class="footer-widget__inner">
                         <h3 class="footer-widget__title">Popular Courses</h3><!-- /.footer-widget__title -->
                         <ul class="footer-widget__links-list list-unstyled">
-                            <li><a href="#"> Courses 01</a></li>
-                            <li><a href="#">Courses 02</a></li>
-                            <li><a href="#">Courses 03</a></li>
+                              <?php
+                            $COURSE_OBJ =new Room(NULL);
+                            $COURSE = $COURSE_OBJ->all();
+                            foreach ($COURSE as $key=> $course){
+                            if($key < 3){
+                            ?>
+                            <li><a href="view-pearl-divers-course.php?=id<?php echo $course['id'];?>"><?php echo $course['title'];?></a></li>
+                                <?php
+                            }
+                            }
+                       ?>
                         </ul><!-- /.footer-widget__links-list -->
                     </div><!-- /.footer-widget__inner -->
                 </div><!-- /.footer-widget -->

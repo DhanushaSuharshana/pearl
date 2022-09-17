@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+include_once (dirname(__FILE__) . '/class/include.php');
+
+
+?>
 <html lang="en" dir="ltr">
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <head>
