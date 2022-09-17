@@ -89,13 +89,7 @@ include_once (dirname(__FILE__) . '/class/include.php');
                         }
                        ?>
                     </div><!-- /.row -->
-                    <div class="post-pagination">
-                        <a href="#" class="post-pagination__prev"><i class="fa fa-angle-left"></i></a>
-                        <a href="#" class="active">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#" class="post-pagination__next"><i class="fa fa-angle-right"></i></a>
-                    </div><!-- /.post-pagination -->
+                  
                 </div><!-- /.container -->
             </section><!-- /.course-one -->
 

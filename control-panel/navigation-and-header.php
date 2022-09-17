@@ -293,7 +293,7 @@
                 <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">chevron_right</i>
-                        <span>Rooms</span>
+                        <span>Courses</span>
                     </a>
                     <ul class="ml-menu">
                         <li>
@@ -319,7 +319,7 @@
                 <li class="qqq">
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">chevron_right</i>
-                        <span>Attractions</span>
+                        <span>Dive Site</span>
                     </a>
                     <ul class="ml-menu">
                         <li>
@@ -345,7 +345,7 @@
                 <li class="qqq">
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">chevron_right</i>
-                        <span>Activities</span>
+                        <span>Our Team</span>
                     </a>
                     <ul class="ml-menu">
                         <li>
