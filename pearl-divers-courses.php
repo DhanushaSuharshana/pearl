@@ -1,11 +1,14 @@
 <!DOCTYPE html>
+<?php
+include_once (dirname(__FILE__) . '/class/include.php');
+?>
 <html lang="en" dir="ltr">
 
 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Courses Page || Scubo || Scuba Diving Centre HTML Template</title>
+        <title>Courses Page ||  Pearl Divers Sri Lanka</title>
 
         <!-- favicons -->
         <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
@@ -61,102 +64,30 @@
               
                 <div class="container">
                     <div class="row">
+                        <?php
+                        $COURSE_OBJ = new Room(NULL);
+                        $COURSE = $COURSE_OBJ->all();
+                        foreach ($COURSE as $course){
+                        ?>
                         <div class="col-lg-4 col-md-6">
                             <div class="course-one__single">
                                 <div class="course-one__image">
-                                    <a href="view-pearl-drivers-course.php" class="course-one__cat">advanced</a>
+                                    <a href="view-pearl-divers-course.php?id=<?php echo $course['id'];?>" class="course-one__cat">advanced</a>
                                     <div class="course-one__image-inner">
-                                        <img src="assets/images/courses/course-1-1.jpg" alt="">
+                                        <img src="upload/room/<?php echo $course['image_name'];?>" alt="">
                                         <a href=""><i class="scubo-icon-plus-symbol"></i></a>
                                     </div><!-- /.course-one__image-inner -->
                                 </div><!-- /.course-one__image -->
                                 <div class="course-one__content hvr-sweep-to-bottom">
-                                    <h3><a href="view-pearl-drivers-course.php">Scuba diving</a></h3>
-                                    <p>There are many variatin of passages of lorem ipsum available, but the majority have.</p>
+                                    <h3><a href="view-pearl-divers-course.php?id=<?php echo $course['id'];?>"><?php echo $course['title'];?></a></h3>
+                                    <p><?php echo substr($course['description'], 0, 100).'........';?></p>
                                 </div><!-- /.course-one__content -->
-                                <a href="" class="course-one__book-link">Book this course</a>
+                                <a href="view-pearl-divers-course.php?id=<?php echo $course['id'];?>" class="course-one__book-link">View More</a>
                             </div><!-- /.course-one__single -->
                         </div><!-- /.col-lg-4 col-md-6 -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="course-one__single">
-                                <div class="course-one__image">
-                                    <a href="" class="course-one__cat">beginner</a>
-                                    <div class="course-one__image-inner">
-                                        <img src="assets/images/courses/course-1-2.jpg" alt="">
-                                        <a href=""><i class="scubo-icon-plus-symbol"></i></a>
-                                    </div><!-- /.course-one__image-inner -->
-                                </div><!-- /.course-one__image -->
-                                <div class="course-one__content hvr-sweep-to-bottom">
-                                    <h3><a href="">Extended range</a></h3>
-                                    <p>There are many variatin of passages of lorem ipsum available, but the majority have.</p>
-                                </div><!-- /.course-one__content -->
-                                <a href="" class="course-one__book-link">Book this course</a>
-                            </div><!-- /.course-one__single -->
-                        </div><!-- /.col-lg-4 col-md-6 -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="course-one__single">
-                                <div class="course-one__image">
-                                    <a href="" class="course-one__cat">Professional</a>
-                                    <div class="course-one__image-inner">
-                                        <img src="assets/images/courses/course-1-3.jpg" alt="">
-                                        <a href=""><i class="scubo-icon-plus-symbol"></i></a>
-                                    </div><!-- /.course-one__image-inner -->
-                                </div><!-- /.course-one__image -->
-                                <div class="course-one__content hvr-sweep-to-bottom">
-                                    <h3><a href="">free diving</a></h3>
-                                    <p>There are many variatin of passages of lorem ipsum available, but the majority have.</p>
-                                </div><!-- /.course-one__content -->
-                                <a href="" class="course-one__book-link">Book this course</a>
-                            </div><!-- /.course-one__single -->
-                        </div><!-- /.col-lg-4 col-md-6 -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="course-one__single">
-                                <div class="course-one__image">
-                                    <a href="" class="course-one__cat">advanced</a>
-                                    <div class="course-one__image-inner">
-                                        <img src="assets/images/courses/course-1-4.jpg" alt="">
-                                        <a href=""><i class="scubo-icon-plus-symbol"></i></a>
-                                    </div><!-- /.course-one__image-inner -->
-                                </div><!-- /.course-one__image -->
-                                <div class="course-one__content hvr-sweep-to-bottom">
-                                    <h3><a href="">Rebreather</a></h3>
-                                    <p>There are many variatin of passages of lorem ipsum available, but the majority have.</p>
-                                </div><!-- /.course-one__content -->
-                                <a href="" class="course-one__book-link">Book this course</a>
-                            </div><!-- /.course-one__single -->
-                        </div><!-- /.col-lg-4 col-md-6 -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="course-one__single">
-                                <div class="course-one__image">
-                                    <a href="" class="course-one__cat">advanced</a>
-                                    <div class="course-one__image-inner">
-                                        <img src="assets/images/courses/course-1-5.jpg" alt="">
-                                        <a href=""><i class="scubo-icon-plus-symbol"></i></a>
-                                    </div><!-- /.course-one__image-inner -->
-                                </div><!-- /.course-one__image -->
-                                <div class="course-one__content hvr-sweep-to-bottom">
-                                    <h3><a href="">Swimming</a></h3>
-                                    <p>There are many variatin of passages of lorem ipsum available, but the majority have.</p>
-                                </div><!-- /.course-one__content -->
-                                <a href="" class="course-one__book-link">Book this course</a>
-                            </div><!-- /.course-one__single -->
-                        </div><!-- /.col-lg-4 col-md-6 -->
-                        <div class="col-lg-4 col-md-6">
-                            <div class="course-one__single">
-                                <div class="course-one__image">
-                                    <a href="" class="course-one__cat">Professional</a>
-                                    <div class="course-one__image-inner">
-                                        <img src="assets/images/courses/course-1-6.jpg" alt="">
-                                        <a href=""><i class="scubo-icon-plus-symbol"></i></a>
-                                    </div><!-- /.course-one__image-inner -->
-                                </div><!-- /.course-one__image -->
-                                <div class="course-one__content hvr-sweep-to-bottom">
-                                    <h3><a href="">Snorkeling</a></h3>
-                                    <p>There are many variatin of passages of lorem ipsum available, but the majority have.</p>
-                                </div><!-- /.course-one__content -->
-                                <a href="" class="course-one__book-link">Book this course</a>
-                            </div><!-- /.course-one__single -->
-                        </div><!-- /.col-lg-4 col-md-6 -->
+                       <?php 
+                        }
+                       ?>
                     </div><!-- /.row -->
                     <div class="post-pagination">
                         <a href="#" class="post-pagination__prev"><i class="fa fa-angle-left"></i></a>

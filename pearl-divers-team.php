@@ -1,18 +1,13 @@
 <!DOCTYPE html>
 <?php
 include_once (dirname(__FILE__) . '/class/include.php');
-
-$id = $_GET["id"];
-
-$COURSE_VIEW = new Room($id);
 ?>
-
 <html lang="en" dir="ltr">
-<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Course Details || Pearl Divers Sri Lanka</title>
+        <title>Our Team || Pearl Divers Sri Lanka</title>
 
         <!-- favicons -->
         <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
@@ -44,90 +39,55 @@ $COURSE_VIEW = new Room($id);
 
     <body>
         <div class="preloader">
-             <img src="assets/images/preload.PNG" width="150px" class="preloader__image" alt="">
+           <img src="assets/images/preload.PNG" width="150px" class="preloader__image" alt="">
         </div><!-- /.preloader -->
         <div class="page-wrapper">
 
+
             <?php include './header.php'; ?>
+
 
             <section class="page-header">
                 <div class="page-header__bg" style="background-image: url(assets/images/background/footer-bg-1-1.jpg);"></div>
                 <!-- /.page-header__bg -->
                 <div class="container">
                     <ul class="list-unstyled thm-breadcrumb">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="courses-pearl-drivers.php">Courses</a></li>
-                        <li class="active"><a href="">Course Details</a></li>
+                        <li><a href="">Home</a></li>
+                        <li class="active"><a href="#">Our Team</a></li>
                     </ul><!-- /.list-unstyled -->
-                    <h2 class="page-header__title">Course Details</h2><!-- /.page-header__title -->
+                    <h2 class="page-header__title">Our Team</h2><!-- /.page-header__title -->
                 </div><!-- /.container -->
             </section><!-- /.page-header -->
 
             <section class="blog-details">
-                  
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-8">
-                            <div class="blog-details__main">
-                                <div class="blog-one__image">
-                                
-                                    <div class="blog-one__image-inner">
-                                        <img src="upload/room/<?php echo $COURSE_VIEW->image_name;?>" alt="">
-                                    </div><!-- /.blog-one__image-inner -->
-                                </div><!-- /.blog-one__image -->
-                                
-            
-            <section class="brand-one">
-                <div class="container">
-                    <div class="brand-one__carousel owl-carousel thm__owl-carousel owl-theme" data-options='{"loop": true, "autoplay": true, "autoplayHoverPause": true, "autoplayTimeout": 5000, "items": 5, "dots": false, "nav": false, "margin": 100, "smartSpeed": 700, "responsive": { "0": {"items": 2, "margin": 3}, "480": {"items": 3, "margin": 3}, "991": {"items": 4, "margin": 3}, "1199": {"items": 5, "margin": 3}}}'>
-                         <?php
-                                    $COURSE_PHOTO_OBJ = new RoomPhoto(NULL);
-                                     $COURSE_PHOTO = $COURSE_PHOTO_OBJ->getRoomPhotosById($id);
-                                    foreach ($COURSE_PHOTO as $key => $course_photo) {
-                                        ?>
-                        <div class="item">
-                            <img src="upload/room/gallery/<?php echo $course_photo['image_name'];?>" alt="">
-                        </div><!-- /.item -->
-                          <?php
-                                    }
-                                    ?>
-                      
-                    </div><!-- /.brand-one__carousel owl-carousel thm__owl-carousel owl-theme -->
-                </div><!-- /.container -->
-            </section><!-- /.brand-one -->
-                                <div class="blog-details__content">
-                                    <div class="blog-one__meta"></div><!-- /.blog-one__meta -->
-                                    <h3 class="blog-details__main-title"><?php echo $COURSE_VIEW->title;?></h3>
-                                    <p><?php echo $COURSE_VIEW->description;?></p>
-                                </div><!-- /.blog-details__content -->
-
-                            </div><!-- /.blog-details__main -->
-
+                        <?php
+                        $ACTIVITY_OBJ =new Activities(NULL);
+                        $ACTIVITY =$ACTIVITY_OBJ->all();
+                        foreach ($ACTIVITY as $activity){
+                                ?>
+                        <div class="col-lg-6">
+                            <div class="comment-one">
+                                <div class="comment-one__single">
+                                    <img src="upload/activity/<?php echo $activity['image_name'];?>" alt="">
+                                    <div class="comment-one__top">
+                                        <h3><?php echo $activity['title'];?></h3>
+                                        <span><?php echo $activity['short_description'];?></span>
+                                    </div><!-- /.comment-one__top -->
+                                    <p><?php echo $activity['description'];?> </p>
+                               
+                                </div><!-- /.comment-one__single -->
+                            </div><!-- /.comment-one -->
                         </div><!-- /.col-lg-8 -->
-                        <div class="col-lg-4">
-                            <div class="sidebar">
-                                <div class="sidebar__single sidebar__category">
-                                    <h3 class="sidebar__title">All Courses</h3><!-- /.sidebar__title -->
-                                    <ul class="sidebar__category-list list-unstyled">
-                                        <?php 
-                                        $COURSE_OBJ =new Room(NULL);
-                                        $COURSE_TITLE = $COURSE_OBJ->all();
-                                        foreach ($COURSE_TITLE as $c_title){
-                                        ?>
-                                        <li><a href="view-pearl-divers-course.php?id=<?php echo $c_title['id'];?>"><?php echo $c_title['title'];?></a></li>
-                                 <?php 
-                                        }
-                                        ?>
-                                    </ul><!-- /.sidebar__category-list list-unstyled -->
-                                </div><!-- /.sidebar__single  -->
-                            </div><!-- /.sidebar -->
-                        </div><!-- /.col-lg-4 -->
+<?php 
+                        }
+?>
                     </div><!-- /.row -->
                 </div><!-- /.container -->
             </section><!-- /.blog-details -->
 
-            <?php include './footer.php'; ?>
-            <!-- /.site-footer-one -->
+            <?php include './footer.php'; ?><!-- /.site-footer-one -->
         </div><!-- /.page-wrapper -->
 
 
@@ -143,7 +103,7 @@ $COURSE_VIEW = new Room($id);
             </div><!-- /.side-menu__block-overlay -->
             <div class="side-menu__block-inner ">
 
-                <a href="" class="side-menu__logo"><img src="assets/images/logo-3-1.png" alt="" width="143"></a>
+                <a href="index-2.html" class="side-menu__logo"><img src="assets/images/logo-3-1.png" alt="" width="143"></a>
                 <nav class="mobile-nav__container">
                     <!-- content is loading via js -->
                 </nav>
@@ -179,4 +139,5 @@ $COURSE_VIEW = new Room($id);
         <!-- Custom Scripts -->
         <script src="assets/js/theme.js"></script>
     </body>
+
 </html>
