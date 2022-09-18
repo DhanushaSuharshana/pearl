@@ -178,7 +178,7 @@ $GALLERY = $GALLERY_OBJ->getAlbumPhotosById(2);
                 <div class="container">
                     <div class="video-two__box wow fadeInRight" data-wow-duration="1500ms">
                         <img src="assets/images/resources/video-1-1.jpg" alt="">
-                        <a href="https://www.youtube.com/watch?v=7rQe_Q4FkaY" class="video-popup"><i class="fa fa-play"></i></a>
+                        <a href="https://www.youtube.com/watch?v=mjV3WHgF1V8" class="video-popup"><i class="fa fa-play"></i></a>
                         <!-- /.video-popup -->
                     </div><!-- /.video-two__box -->
                     <div class="row">
@@ -232,18 +232,21 @@ $GALLERY = $GALLERY_OBJ->getAlbumPhotosById(2);
                         <div class="item">
                             <div class="course-one__single">
                                 <div class="course-one__image">
-                                    <a href="" class="course-one__cat">advanced</a>
+                                    <a href="view-pearl-divers-course.php?id=<?php echo $course['id'];?>" class="course-one__cat">advanced</a>
                                     <div class="course-one__image-inner">
                                         <img src="upload/room/<?php echo $course['image_name'];?>" alt="">
-                                        <a href=""><i class="scubo-icon-plus-symbol"></i></a>
+                                        <a href="view-pearl-divers-course.php?id=<?php echo $course['id'];?>"><i class="scubo-icon-plus-symbol"></i></a>
                                     </div><!-- /.course-one__image-inner -->
                                 </div><!-- /.course-one__image -->
                                 <div class="course-one__content hvr-sweep-to-bottom">
-                                    <h3><a href="view-pearl-divers-course.php?id=<?php echo $course['id'];?>"><?php echo $course['title'];?></a></h3>
-                                    <p><?php echo substr($course['description'], 0, 120).'......';?></p>
+                                    
+                                        <h3>  <a href="view-pearl-divers-course.php?id=<?php echo $course['id'];?>"><?php echo $course['title'];?></a></h3>
+                                  <a href="view-pearl-divers-course.php?id=<?php echo $course['id'];?>">  <p><?php echo substr($course['description'], 0, 120).'......';?></p>
+                                    </a>
                                 </div><!-- /.course-one__content -->
                                 <a href="view-pearl-divers-course.php?id=<?php echo $course['id'];?>" class="course-one__book-link">View this course</a>
                             </div><!-- /.course-one__single -->
+                           
                         </div><!-- /.item -->
                       <?php
                       
@@ -398,13 +401,12 @@ $GALLERY = $GALLERY_OBJ->getAlbumPhotosById(2);
                 <nav class="mobile-nav__container">
                     <!-- content is loading via js -->
                 </nav>
-                <p class="side-menu__block__copy">(c) 2022 <a href="#">Pearl Divers</a> - All rights reserved.</p>
+                <p class="side-menu__block__copy">(c) 2022 <a href="#">Smart Digital</a> - All rights reserved.</p>
                 <div class="side-menu__social">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-google-plus"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="https://www.facebook.com/pearldiversnwatersport/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/unawatunadiving"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/pearldivers.lk/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tripadvisor.com/Attraction_Review-g644047-d3698397-Reviews-Pearl_Divers-Unawatuna_Galle_District_Southern_Province.html"><i class="fab fa-tripadvisor"></i></a>
                 </div>
             </div><!-- /.side-menu__block-inner -->
         </div><!-- /.side-menu__block -->

@@ -75,12 +75,13 @@ include_once (dirname(__FILE__) . '/class/include.php');
                                     <a href="view-pearl-divers-course.php?id=<?php echo $course['id'];?>" class="course-one__cat">advanced</a>
                                     <div class="course-one__image-inner">
                                         <img src="upload/room/<?php echo $course['image_name'];?>" alt="">
-                                        <a href=""><i class="scubo-icon-plus-symbol"></i></a>
+                                        <a href="view-pearl-divers-course.php?id=<?php echo $course['id'];?>"><i class="scubo-icon-plus-symbol"></i></a>
                                     </div><!-- /.course-one__image-inner -->
                                 </div><!-- /.course-one__image -->
                                 <div class="course-one__content hvr-sweep-to-bottom">
                                     <h3><a href="view-pearl-divers-course.php?id=<?php echo $course['id'];?>"><?php echo $course['title'];?></a></h3>
-                                    <p><?php echo substr($course['description'], 0, 100).'........';?></p>
+                                   <a href="view-pearl-divers-course.php?id=<?php echo $course['id'];?>"> <p><?php echo substr($course['description'], 0, 100).'........';?></p>
+                                   </a>
                                 </div><!-- /.course-one__content -->
                                 <a href="view-pearl-divers-course.php?id=<?php echo $course['id'];?>" class="course-one__book-link">View More</a>
                             </div><!-- /.course-one__single -->
@@ -98,8 +99,7 @@ include_once (dirname(__FILE__) . '/class/include.php');
         </div><!-- /.page-wrapper -->
 
 
-
-        <div class="side-menu__block">
+ <div class="side-menu__block">
 
             <a href="#" class="side-menu__toggler side-menu__close-btn"><i class="fa fa-times"></i>
                 <!-- /.fa fa-close --></a>
@@ -110,17 +110,16 @@ include_once (dirname(__FILE__) . '/class/include.php');
             </div><!-- /.side-menu__block-overlay -->
             <div class="side-menu__block-inner ">
 
-                <a href="" class="side-menu__logo"><img src="assets/images/logo-3-1.png" alt="" width="143"></a>
+                <a href="index.php" class="side-menu__logo"><img src="assets/images/preload.PNG" alt="" width="110"></a>
                 <nav class="mobile-nav__container">
                     <!-- content is loading via js -->
                 </nav>
-                <p class="side-menu__block__copy">(c) 2020 <a href="#">SCUBO</a> - All rights reserved.</p>
+                <p class="side-menu__block__copy">(c) 2022 <a href="#">Smart Digital</a> - All rights reserved.</p>
                 <div class="side-menu__social">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-google-plus"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="https://www.facebook.com/pearldiversnwatersport/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/unawatunadiving"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/pearldivers.lk/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tripadvisor.com/Attraction_Review-g644047-d3698397-Reviews-Pearl_Divers-Unawatuna_Galle_District_Southern_Province.html"><i class="fab fa-tripadvisor"></i></a>
                 </div>
             </div><!-- /.side-menu__block-inner -->
         </div><!-- /.side-menu__block -->

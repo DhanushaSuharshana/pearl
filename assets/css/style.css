@@ -123,7 +123,7 @@ a:focus {
 
 .block-title h3 {
     margin: 0;
-    font-size: 70px;
+    font-size: 60px;
     font-weight: bold;
     font-family: var(--thm-font);
     color: var(--thm-black);
@@ -1844,7 +1844,7 @@ a:focus {
 
 .slider-one__content h3 {
     margin: 0;
-    font-size: 120px;
+    font-size: 70px;
     line-height: 100px;
     color: #fff;
     text-transform: uppercase;
@@ -2042,9 +2042,9 @@ a:focus {
 .page-header__title {
     margin: 0;
     font-family: var(--thm-font);
-    font-weight: 800;
+    font-weight: 700;
     color: #fff;
-    font-size: 60px;
+    font-size: 50px;
     text-transform: uppercase;
 }
 
