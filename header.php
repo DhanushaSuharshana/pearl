@@ -46,7 +46,7 @@
                             <li><a href="pearl-divers-dive-sites.php">Dive Sites</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
+                    <li >
                         <a href="pearl-divers-services.php">Services</a>
 
                     </li>

@@ -150,9 +150,9 @@ $GALLERY = $GALLERY_OBJ->getAlbumPhotosById(2);
                                 </div><!-- /.block-title -->
                                 <p><?php echo $WELCOME_DESCRIPTION->description; ?></p>
                                 <div class="topbar-one__social" style="margin-top: 20px; margin-bottom: 20px">
-                                    <a href="#"><img width="40px" src="https://www.pearldivers.lk/images/facebook.png"></a>
-                                    <a href="#"><img width="40px" src="https://www.pearldivers.lk/images/instagram.png"></a>
-                                    <a href="#"><img width="40px" src="https://www.pearldivers.lk/images/twitter.png"></a>
+                                    <a href="https://www.facebook.com/pearldiversnwatersport/"><img width="40px" src="https://www.pearldivers.lk/images/facebook.png"></a>
+                                    <a href="https://www.instagram.com/pearldivers.lk/"><img width="40px" src="https://www.pearldivers.lk/images/instagram.png"></a>
+                                    <a href="https://twitter.com/unawatunadiving"><img width="40px" src="https://www.pearldivers.lk/images/twitter.png"></a>
                                     <a href="#"><img width="40px" src="https://www.pearldivers.lk/images/wechat.png"></a>
                                 </div>
                                 <!--                                <ul class="list-unstyled about-three__list">
