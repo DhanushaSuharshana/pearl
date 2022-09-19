@@ -32,14 +32,16 @@
 
                     </li>
                     <li class="dropdown">
-                        <a href="about-pearl-divers.php">About</a>
+                        <a href="#">About</a>
                         <ul>
+                            <li><a href="about-pearl-divers.php">About Us</a></li>
                             <li><a href="pearl-divers-team.php">Our Team</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="pearl-divers-courses.php">Courses</a>
+                        <a href="#">Courses</a>
                         <ul>
+                            <li><a href="pearl-divers-courses.php">Our Course</a></li>
                              <li><a href="pearl-divers-course-rates.php">Course Rates</a></li>
                             <li><a href="pearl-divers-dive-sites.php">Dive Sites</a></li>
                         </ul>

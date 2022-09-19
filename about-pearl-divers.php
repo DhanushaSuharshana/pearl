@@ -207,32 +207,30 @@ $ABOUT_IMAGE_AND_TEXT =new Page(3);
     </div><!-- /.page-wrapper -->
 
 
+ <div class="side-menu__block">
 
-    <div class="side-menu__block">
+            <a href="#" class="side-menu__toggler side-menu__close-btn"><i class="fa fa-times"></i>
+                <!-- /.fa fa-close --></a>
 
-        <a href="#" class="side-menu__toggler side-menu__close-btn"><i class="fa fa-times"></i>
-            <!-- /.fa fa-close --></a>
+            <div class="side-menu__block-overlay custom-cursor__overlay">
+                <div class="cursor"></div>
+                <div class="cursor-follower"></div>
+            </div><!-- /.side-menu__block-overlay -->
+            <div class="side-menu__block-inner ">
 
-        <div class="side-menu__block-overlay custom-cursor__overlay">
-            <div class="cursor"></div>
-            <div class="cursor-follower"></div>
-        </div><!-- /.side-menu__block-overlay -->
-        <div class="side-menu__block-inner ">
-
-            <a href="./" class="side-menu__logo"><img src="assets/images/logo-3-1.png" alt="" width="143"></a>
-            <nav class="mobile-nav__container">
-                <!-- content is loading via js -->
-            </nav>
-            <p class="side-menu__block__copy">(c) 2020 <a href="#">SCUBO</a> - All rights reserved.</p>
-            <div class="side-menu__social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-google-plus"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-pinterest-p"></i></a>
-            </div>
-        </div><!-- /.side-menu__block-inner -->
-    </div><!-- /.side-menu__block -->
+                <a href="index.php" class="side-menu__logo"><img src="assets/images/preload.PNG" alt="" width="110"></a>
+                <nav class="mobile-nav__container">
+                    <!-- content is loading via js -->
+                </nav>
+                <p class="side-menu__block__copy">(c) 2022 <a href="#">Smart Digital</a> - All rights reserved.</p>
+                <div class="side-menu__social">
+                    <a href="https://www.facebook.com/pearldiversnwatersport/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/unawatunadiving"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/pearldivers.lk/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tripadvisor.com/Attraction_Review-g644047-d3698397-Reviews-Pearl_Divers-Unawatuna_Galle_District_Southern_Province.html"><i class="fab fa-tripadvisor"></i></a>
+                </div>
+            </div><!-- /.side-menu__block-inner -->
+        </div><!-- /.side-menu__block -->
 
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
 
