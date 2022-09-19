@@ -44,7 +44,7 @@
                             foreach ($COURSE as $key=> $course){
                             if($key < 3){
                             ?>
-                            <li><a href="view-pearl-divers-course.php?=id<?php echo $course['id'];?>"><?php echo $course['title'];?></a></li>
+                            <li><a href="view-pearl-divers-course.php?id=<?php echo $course['id'];?>"><?php echo $course['title'];?></a></li>
                                 <?php
                             }
                             }
