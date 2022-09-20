@@ -4801,7 +4801,7 @@ a:focus {
 }
 
 .pricing-one .table-responsive {
-    border: 1px solid #e3e9ec;
+  
     border-top: 0;
     background-color: #fff;
 }
@@ -4809,6 +4809,16 @@ a:focus {
 .pricing-one table {
     width: 100%;
     padding-left: 1px;
+}
+.pricing-one table{
+   border: 1px solid #e3e9ec; 
+   margin-bottom: 10px;
+}
+.pricing-one p{
+    text-align: left;
+     font-size: 20px;
+    font-weight: 500;
+    
 }
 
 .pricing-one table thead {
